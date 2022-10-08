@@ -10,7 +10,8 @@ public class playerCollision : MonoBehaviour
     //public float hits = 0.0f;
     //private float damage = 1.0f;
     //public float health = 10.0f;
-    public int coins = 0;
+    /*public int coins = 0;
+    
 
     void Start()
     {
@@ -22,9 +23,10 @@ public class playerCollision : MonoBehaviour
         if(hitInfo.CompareTag("Clue"))
         {
             coins ++;
-            Destroy(hitInfo.gameObject);
+            dialogue.TriggerDialogue();
+            //Destroy(hitInfo.gameObject);
         }
-    }
+    }*/
 
     ////////////////////////////////////
     /*public void takeDamage()

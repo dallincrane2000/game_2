@@ -49,7 +49,6 @@ GraphicsSettings:
   m_LightmapStripping: 0
   m_FogStripping: 0
   m_InstancingStripping: 0
-  m_BrgStripping: 0
   m_LightmapKeepPlain: 1
   m_LightmapKeepDirCombined: 1
   m_LightmapKeepDynamicPlain: 1
@@ -60,9 +59,9 @@ GraphicsSettings:
   m_FogKeepExp: 1
   m_FogKeepExp2: 1
   m_AlbedoSwatchInfos: []
-  m_LightsUseLinearIntensity: 1
+  m_LightsUseLinearIntensity: 0
   m_LightsUseColorTemperature: 1
   m_DefaultRenderingLayerMask: 1
   m_LogWhenShaderIsCompiled: 0
   m_SRPDefaultSettings:
-    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: 6b435814a6d9c684cb197fcb3f894573, type: 2}
+    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: b5de3ced29e9b574a865d8e94642921a, type: 2}
