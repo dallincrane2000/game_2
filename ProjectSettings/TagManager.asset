@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Ground
+=======
+  - Clue
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -41,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Backround
+    uniqueID: 631395629
+    locked: 0
+  - name: Floor
+    uniqueID: 3674193785
+    locked: 0
+  - name: Clue
+    uniqueID: 1950027993
+    locked: 0
+  - name: Player
+    uniqueID: 1448912813
     locked: 0
