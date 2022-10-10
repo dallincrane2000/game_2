@@ -8,7 +8,7 @@ public class unlock : MonoBehaviour
 {
     //public Text codeText;
     [SerializeField] private TextMeshProUGUI codeText;
-    string codeTextValue = "";
+    public string codeTextValue = "";
     public string PassCode;
 
     // Update is called once per frame
@@ -19,9 +19,10 @@ public class unlock : MonoBehaviour
         if (codeTextValue == PassCode)
         {
             Debug.Log("Correct");
+            gameObject.SetActive(false);
         }
 
-        if (codeTextValue.Length >= 4)
+        else if (codeTextValue.Length >= 4)
         {
             codeTextValue = "";
             Debug.Log("Incorrect");

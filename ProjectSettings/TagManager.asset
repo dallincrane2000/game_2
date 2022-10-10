@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - Ground
-=======
   - Clue
->>>>>>> Stashed changes
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -46,15 +43,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Colisions
+    uniqueID: 1084614761
+    locked: 0
   - name: Backround
-    uniqueID: 631395629
+    uniqueID: 975159415
     locked: 0
   - name: Floor
-    uniqueID: 3674193785
+    uniqueID: 3494379073
     locked: 0
   - name: Clue
-    uniqueID: 1950027993
+    uniqueID: 3172447083
     locked: 0
   - name: Player
-    uniqueID: 1448912813
+    uniqueID: 1683231629
     locked: 0

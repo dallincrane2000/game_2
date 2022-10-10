@@ -6,20 +6,21 @@ public class keypad : MonoBehaviour
 {
     // keyPad object to enable and disable 
     public GameObject keyPad;
-    // Passcode (Work in Progress)
-    public string code;
 
+    
     // Runs when player enters the keypad area
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Outside");
         if (collision.gameObject.CompareTag("Player"))
         {
             // Enables the Keypad overlay
+            Debug.Log("here");
             keyPad.SetActive(true);
         }
     }
     // Runs when player leaves the Keypad Area
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
