@@ -11,12 +11,8 @@ public class clueColision : MonoBehaviour
         {
             //coins ++;
             dialogue.TriggerDialogue();
+            
             Destroy(gameObject);
         }
-    }
-
-    void OnTriggerExit2D(Collider2D hitInfo)
-    {
-
     }
 }

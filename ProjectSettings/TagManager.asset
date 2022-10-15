@@ -6,6 +6,19 @@ TagManager:
   tags:
   - Clue
   - Ground
+  - clueVents
+  - clueTree
+  - cluePlayground
+  - clueBully
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
   layers:
   - Default
   - TransparentFX
@@ -54,6 +67,9 @@ TagManager:
     locked: 0
   - name: Clue
     uniqueID: 3172447083
+    locked: 0
+  - name: Building
+    uniqueID: 922896009
     locked: 0
   - name: Player
     uniqueID: 1683231629
