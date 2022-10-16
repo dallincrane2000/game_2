@@ -6,13 +6,11 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    //public Text nameText;
-    public TMP_Text nameText;
+    //public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Animator animator;
-    //public Text dialogueText;
-
     private Queue<string> sentences;
+    public float letterSpeed = 0.05f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +18,16 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    void EndDialogue()
+    {
+        animator.SetBool("IsOpen", false);
+        Debug.Log("End of conversation");
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;
+        //nameText.text = dialogue.name;
 
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
@@ -52,13 +56,9 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(letterSpeed);
         }
     }
 
-    void EndDialogue()
-    {
-        animator.SetBool("IsOpen", false);
-        Debug.Log("End of conversation");
-    }
+
 }
