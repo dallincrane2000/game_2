@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     //public Animator animator;
-    private bool facingRight = true; //Depends on if your animation is by default facing right or left
+    private bool facingRight = false; //Depends on if your animation is by default facing right or left
     public float speed = 5;
 
     public Rigidbody2D Player;
