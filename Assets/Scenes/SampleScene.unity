@@ -594,7 +594,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  doubleJumpHeight: 0
+  fallMultiplier: 5
+  lowJumpMultiplier: 3
   jumpVelocity: 12
   destroyTime: 0.5
 --- !u!61 &111441870
@@ -3851,7 +3852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
-  y: 4
+  y: 6
   z: 0
   player: {fileID: 111441873}
 --- !u!1 &579542743
@@ -4759,7 +4760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 335917258}
   animator: {fileID: 1649447765}
-  letterSpeed: 0.05
 --- !u!4 &823754757
 Transform:
   m_ObjectHideFlags: 0
@@ -8936,7 +8936,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 335917258}
   animator: {fileID: 1649447765}
-  letterSpeed: 0.05
 --- !u!1 &1686089720
 GameObject:
   m_ObjectHideFlags: 0

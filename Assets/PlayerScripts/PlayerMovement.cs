@@ -19,13 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer; //Create a place to insert the ground layer
     private bool isTouchingGround;
    
-    private float fallMultiplier = 2.5f;
-    private float lowJumpMultiplier = 2f;
-    public int doubleJumpHeight = 40;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
     public float jumpVelocity = 20;
     public float destroyTime = 0.5f;
-
-    private int jump = 0;
 
     void Awake()
     {
@@ -43,14 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isTouchingGround)
         {
             Player.velocity = Vector2.up * jumpVelocity;
-            jump = 1;
         }
-        else if(Input.GetButtonDown("Jump") && !isTouchingGround && jump == 1)
-        {
-            jump = 0;
-            Player.velocity = Vector2.up * jumpVelocity;
-        }
-        
         if(Player.velocity.y < 0)
         {
             Player.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;

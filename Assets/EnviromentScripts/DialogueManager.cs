@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Animator animator;
     private Queue<string> sentences;
-    public float letterSpeed = 0.05f;
+    private float letterSpeed = 0.01f;
 
     // Start is called before the first frame update
     void Start()
