@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class unlock : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class unlock : MonoBehaviour
         {
             Debug.Log("Correct");
             gameObject.SetActive(false);
+            SceneManager.LoadScene(1);
         }
 
         else if (codeTextValue.Length >= 4)
