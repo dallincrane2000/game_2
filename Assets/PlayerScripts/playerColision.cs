@@ -25,6 +25,10 @@ public class playerColision : MonoBehaviour
         {
             journal.isBully = true;
         }
+        if(collider.CompareTag("crowbar"))
+        {
+            journal.crowbar = true;
+        }
         if(collider.CompareTag("1"))
         {
             journal.one = true;
