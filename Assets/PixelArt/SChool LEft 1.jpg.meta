@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48706326372a1b847a888ef6a3f8f199
+guid: c5b4c9456128d924292f0d8ca3009249
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: School_front_0
+      name: SChool LEft 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 1080
+        width: 1507
+        height: 897
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a17a193bc95df64c8b1b79a83dc3bfc
-      internalID: 1996323706
+      spriteID: 7b6b8d88f9c9935479e0485df2810868
+      internalID: 1042638872
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      School_front_0: 1996323706
+      SChool LEft 1_0: 1042638872
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
