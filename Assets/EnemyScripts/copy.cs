@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 
-public class FieldOfView : MonoBehaviour 
+public class copy : MonoBehaviour 
 {
+
     [SerializeField] private LayerMask layerMask;
     private Mesh mesh;
     private float fov;
@@ -18,15 +19,15 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fov = 110f;
-        viewDistance = 17f;
-        origin = Vector3.zero;
+        fov = 90f;
+        viewDistance = 9f;
+        origin = point.position;
         //rotation = point.rotation.z;
     }
 
     private void LateUpdate() 
     {
-        int rayCount = 100;
+        int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
 
@@ -46,14 +47,11 @@ public class FieldOfView : MonoBehaviour
             if (raycastHit2D.collider != null) 
             {
                 // No hit
-                //Debug.DrawRay(origin, point.position, Color.cyan , 2f);
                 vertex = raycastHit2D.point;
                 Debug.Log("here");
-            } 
-            else 
-            {
+            } else {
+                Debug.DrawRay(origin, UtilsClass.GetVectorFromAngle(angle), Color.red ,2f);
                 // Hit object
-                //Debug.DrawRay(origin, UtilsClass.GetVectorFromAngle(angle), Color.cyan , 2f);
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
                 
             }
@@ -87,8 +85,7 @@ public class FieldOfView : MonoBehaviour
         this.rotation = rotation;
     }
 
-    public void SetAimDirection(Vector3 aimDirection) 
-    {
+    public void SetAimDirection(Vector3 aimDirection) {
         startingAngle = UtilsClass.GetAngleFromVectorFloat(aimDirection) - fov / 2f;
     }
 
@@ -97,8 +94,7 @@ public class FieldOfView : MonoBehaviour
         this.fov = fov;
     }
 
-    public void SetViewDistance(float viewDistance) 
-    {
+    public void SetViewDistance(float viewDistance) {
         this.viewDistance = viewDistance;
     }
 
