@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    //[SerializeField] private FieldOfView fieldOfView;
+    [SerializeField] private FieldOfView fieldOfView;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,8 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // fieldOfView.SetOrigin(transform.position);
-        //fieldOfView.SetAimDirection(GetAimDir());
+        //fieldOfView.SetOrigin(transform.position);
+        fieldOfView.SetRotation(transform.rotation.z);
+       //fieldOfView.SetAimDirection(GetAimDir());
     }
 }
