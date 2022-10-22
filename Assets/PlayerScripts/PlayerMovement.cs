@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D Player;
     public GameObject player;
+    public Animator animator;
 
     public Transform groundCheck; //Marker to see where players feet are
     public float groundCheckRadius; //Draw circle around feet
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        //animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         transform.position = transform.position + horizontal * speed * Time.deltaTime;
 
