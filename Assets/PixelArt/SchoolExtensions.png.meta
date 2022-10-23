@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48706326372a1b847a888ef6a3f8f199
+guid: 6d87e4e88420b284c95172b6c2aa15fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +68,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: School_front_0
+      name: SchoolExtensions_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 1080
+        width: 932
+        height: 2560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a17a193bc95df64c8b1b79a83dc3bfc
-      internalID: 1996323706
+      spriteID: 8111860ef6399d94b92d16e59e31251f
+      internalID: -818497191
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      School_front_0: 1996323706
+      SchoolExtensions_0: -818497191
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
