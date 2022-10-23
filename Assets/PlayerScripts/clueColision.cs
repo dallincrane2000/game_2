@@ -23,7 +23,7 @@ public class clueColision : MonoBehaviour
         if(hitInfo.CompareTag("Player") && gameObject.CompareTag("4") && journal.crowbar == true)
         {
             //dialogue.TriggerDialogue();
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //Switch scenes
         }
         else if(hitInfo.CompareTag("Player") && gameObject.CompareTag("4") && journal.crowbar == false)

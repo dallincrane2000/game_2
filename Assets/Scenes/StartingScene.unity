@@ -1703,11 +1703,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0430763, y: 1.7251828}
   m_EdgeRadius: 0
---- !u!1 &303277175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4259661330672901580, guid: 8da0e26e9e00584418d7e7d839eef440, type: 3}
-  m_PrefabInstance: {fileID: 4259661330369903035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &303277176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4259661330672901571, guid: 8da0e26e9e00584418d7e7d839eef440, type: 3}
@@ -3262,11 +3257,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739363385}
   m_CullTransparentMesh: 1
---- !u!224 &757481516 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4259661330720242071, guid: 8da0e26e9e00584418d7e7d839eef440, type: 3}
-  m_PrefabInstance: {fileID: 4259661330369903035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &800524354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,9 +3573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2d9626d3abac445bc4bab5b595ec8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  journalCanvas: {fileID: 303277175}
-  itemSlot: {fileID: 941599765}
-  ClueLog: {fileID: 757481516}
   isVents: 0
   isPlayground: 0
   isTree: 0
@@ -4107,11 +4094,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &941599765 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4259661331041736110, guid: 8da0e26e9e00584418d7e7d839eef440, type: 3}
-  m_PrefabInstance: {fileID: 4259661330369903035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &942984871
 GameObject:
   m_ObjectHideFlags: 0
