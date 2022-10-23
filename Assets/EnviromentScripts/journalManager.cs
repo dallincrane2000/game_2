@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class journalManager : MonoBehaviour
 {
-    public GameObject journalCanvas;
-    public Transform itemSlot;
-    public Transform ClueLog;
+    private GameObject journalCanvas;
+    private Transform itemSlot;
+    private Transform ClueLog;
     private bool isOpen = false;
 
     public bool isVents = false;
@@ -27,6 +27,10 @@ public class journalManager : MonoBehaviour
     
     void Start()
     {
+        journalCanvas = GameObject.Find("JournalCanvas");
+        itemSlot = GameObject.Find("itemSlotContainer").transform;
+        ClueLog = GameObject.Find("clueLogContainer").transform;
+
         journalCanvas.SetActive(false);
         itemSlot.GetChild(0).gameObject.SetActive(false);
         itemSlot.GetChild(1).gameObject.SetActive(false);

@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 296185196}
-  journal: {fileID: 823754755}
+  journal: {fileID: 0}
 --- !u!212 &296185198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 461164293}
-  journal: {fileID: 823754755}
+  journal: {fileID: 0}
 --- !u!114 &461164293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,7 +6413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1417714117}
-  journal: {fileID: 823754755}
+  journal: {fileID: 0}
 --- !u!114 &1417714117
 MonoBehaviour:
   m_ObjectHideFlags: 0

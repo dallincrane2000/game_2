@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class clueColision : MonoBehaviour
+public class clueColisionClass
+ : MonoBehaviour
 {
     public DialogueTrigger dialogue;
-    public journalManager journal;
+    public journalMove journal;
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
