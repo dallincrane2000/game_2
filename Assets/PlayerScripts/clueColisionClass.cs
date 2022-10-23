@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class clueColisionClass
- : MonoBehaviour
+public class clueColisionClass: MonoBehaviour
 {
     public DialogueTrigger dialogue;
     public journalMove journal;
