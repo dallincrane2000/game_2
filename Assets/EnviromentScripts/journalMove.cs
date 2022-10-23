@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class journalManager : MonoBehaviour
+public class journalMove : MonoBehaviour
 {
     public GameObject journalCanvas;
     public Transform itemSlot;
     public Transform ClueLog;
     private bool isOpen = false;
+    private GameObject journal;
 
     public bool isVents = false;
     public bool isPlayground = false;
@@ -27,6 +28,7 @@ public class journalManager : MonoBehaviour
     
     void Start()
     {
+        journal = GameObject.Find("JournalManager");
         journalCanvas.SetActive(false);
         itemSlot.GetChild(0).gameObject.SetActive(false);
         itemSlot.GetChild(1).gameObject.SetActive(false);
@@ -43,6 +45,21 @@ public class journalManager : MonoBehaviour
         ClueLog.GetChild(6).gameObject.SetActive(false);
         ClueLog.GetChild(7).gameObject.SetActive(false);
         ClueLog.GetChild(8).gameObject.SetActive(false);
+        
+        isVents = journal.GetComponent<journalManager>().isVents;
+        crowbar = journal.GetComponent<journalManager>().crowbar;
+        isPlayground = journal.GetComponent<journalManager>().isPlayground;
+        isTree = journal.GetComponent<journalManager>().isTree;
+        isBully = journal.GetComponent<journalManager>().isBully;
+        one = journal.GetComponent<journalManager>().one;
+        two = journal.GetComponent<journalManager>().two;
+        three = journal.GetComponent<journalManager>().three;
+        four = journal.GetComponent<journalManager>().four;
+        five = journal.GetComponent<journalManager>().five;
+        six = journal.GetComponent<journalManager>().six;
+        seven = journal.GetComponent<journalManager>().seven;
+        eight = journal.GetComponent<journalManager>().eight;
+        nine = journal.GetComponent<journalManager>().nine;
     }
 
 
