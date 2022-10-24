@@ -8,7 +8,7 @@ public class endCutscene : MonoBehaviour
     public static bool isCutSceneOn;
     public DialogueTrigger dialogue;
     private DialogueTrigger dialogue2;
-    private journalManager journal;
+    private journalMove journal;
     public int count = 0;
     private GameObject player;
     private GameObject bully;
@@ -17,7 +17,7 @@ public class endCutscene : MonoBehaviour
     {
         animationScene = GameObject.Find("cameraControl").GetComponent<Animator>();
         dialogue2 = GameObject.Find("Dialogue").GetComponent<DialogueTrigger>();
-        journal = GameObject.Find("JournalManager").GetComponent<journalManager>();
+        journal = GameObject.Find("JournalManager1").GetComponent<journalMove>();
         bully = GameObject.Find("clueBully(Clone)");
         player = GameObject.Find("Player");
     }
@@ -28,12 +28,14 @@ public class endCutscene : MonoBehaviour
         if(collision.tag == "Player")
         {
             isCutSceneOn = true;
+            journal.isBully = true;
             count += 1;
             player.GetComponent<PlayerMovement>().speed = 0f;
             player.GetComponent<PlayerMovement>().jumpVelocity = 0f;
             animationScene.SetBool("cutscene1", true);
             dialogueSet();
             yield return new WaitForSeconds(4);
+            
             Invoke(nameof(StopCutscene), 5f);
         }
     }
@@ -41,7 +43,7 @@ public class endCutscene : MonoBehaviour
     void StopCutscene()
     {
         isCutSceneOn = false;
-        journal.isBully = true;
+        
         player.GetComponent<PlayerMovement>().speed = 7f;
         player.GetComponent<PlayerMovement>().jumpVelocity = 12f;
         animationScene.SetBool("cutscene1", false);

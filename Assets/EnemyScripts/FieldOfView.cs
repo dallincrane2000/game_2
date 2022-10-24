@@ -54,7 +54,7 @@ public class FieldOfView : MonoBehaviour
             {
                 if(raycastHitPlayer2D.collider != null)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                    SceneManager.LoadScene(5);
                 }
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
             }
