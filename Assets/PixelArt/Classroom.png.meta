@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4caf5d857536cbe4393a024323c0b493
+guid: e552733de9de439459397c1a0b598849
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_1_0
+      name: Classroom_0
       rect:
         serializedVersion: 2
-        x: 30
+        x: 0
         y: 0
-        width: 90
-        height: 150
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4936347a5fe45244fb496556477a2f9f
-      internalID: 1051624942
+      spriteID: b6455026b4f3a7746aeb31be38de2541
+      internalID: 1820433609
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_1_0: 1051624942
+      Classroom_0: 1820433609
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

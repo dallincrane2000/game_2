@@ -30,7 +30,6 @@ public class journalMove : MonoBehaviour
     {
         journal = GameObject.Find("JournalManager");
         journalCanvas.SetActive(false);
-
         
         itemSlot.GetChild(0).gameObject.SetActive(false);
         itemSlot.GetChild(1).gameObject.SetActive(false);

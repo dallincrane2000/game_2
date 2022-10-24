@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartingScene.unity
     guid: a90dacfea7b1cb442b5f39cee8240e8a
   - enabled: 1
-    path: Assets/Vents.unity
+    path: Assets/Scenes/Vents.unity
     guid: 9b2bcfc80cffa27459f950be53868a47
   - enabled: 1
     path: Assets/Scenes/Classroom.unity

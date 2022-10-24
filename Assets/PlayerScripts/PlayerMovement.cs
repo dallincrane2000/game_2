@@ -52,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     ///////////////////
     void FixedUpdate()
     {
@@ -66,7 +65,11 @@ public class PlayerMovement : MonoBehaviour
     void Flip()
     {
         facingRight = !facingRight;
-        transform.Rotate(0f,180f,0f);
+        transform.Rotate(0f, 180f ,0f);
+    }
+    public Vector3 GetPosition() 
+    {
+        return transform.position;
     }
 }
 

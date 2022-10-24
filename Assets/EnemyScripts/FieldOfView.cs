@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using UnityEngine.SceneManagement;
 
 public class FieldOfView : MonoBehaviour 
 {
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask layerMaskPlayer;
     private Mesh mesh;
     private float fov;
     private float viewDistance;
@@ -13,13 +15,14 @@ public class FieldOfView : MonoBehaviour
     private float rotation;
     private float startingAngle;
     public Transform point;
+    private Vector3 vertex;
 
     private void Awake() 
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         fov = 90f;
-        viewDistance = 20f;
+        viewDistance = 15f;
         origin = Vector3.zero;
         //rotation = point.rotation.z;
     }
@@ -40,23 +43,22 @@ public class FieldOfView : MonoBehaviour
         int triangleIndex = 0;
         for (int i = 0; i <= rayCount; i++)
         {
-            Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHitPlayer2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMaskPlayer);
 
             if (raycastHit2D.collider != null) 
             {
-                // No hit
-                //Debug.DrawRay(origin, point.position, Color.cyan , 2f);
                 vertex = raycastHit2D.point;
-                Debug.Log("here");
             } 
-            else 
+            else
             {
-                // Hit object
-                //Debug.DrawRay(origin, UtilsClass.GetVectorFromAngle(angle), Color.cyan , 2f);
+                if(raycastHitPlayer2D.collider != null)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                }
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
-                
             }
+            
             vertices[vertexIndex] = vertex;
 
             if (i > 0) 

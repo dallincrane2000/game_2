@@ -19,6 +19,8 @@ TagManager:
   - 7
   - 8
   - 9
+  - Bully
+  - crowbar
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
