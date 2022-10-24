@@ -10,12 +10,14 @@ public class startCutscene : MonoBehaviour
     public DialogueTrigger dialogue;
     public DialogueTrigger dialogue2;
     public int count = 0;
-    
+    public GameObject player;
+
     IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
             isCutSceneOn = true;
+            player.GetComponent<PlayerMovement>().speed = 0f;
             animationScene.SetBool("cutscene1", true);
             count += 1;
             dialogueSet();
@@ -30,6 +32,7 @@ public class startCutscene : MonoBehaviour
     void StopCutscene()
     {
         isCutSceneOn = false;
+        player.GetComponent<PlayerMovement>().speed = 7f;
         animationScene.SetBool("cutscene1", false);
         animationBully.SetBool("ripping", false);
         Destroy(gameObject);

@@ -19,11 +19,18 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius; //Draw circle around feet
     public LayerMask groundLayer; //Create a place to insert the ground layer
     private bool isTouchingGround;
+    public AudioClip jumpSound;
+    static AudioSource audio;
    
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float jumpVelocity = 20;
     public float destroyTime = 0.5f;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -41,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isTouchingGround)
         {
             Player.velocity = Vector2.up * jumpVelocity;
+            audio.PlayOneShot(jumpSound, 0.2f);
         }
         if(Player.velocity.y < 0)
         {
