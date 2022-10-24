@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2820710548720850006
+--- !u!1 &8538933384177066934
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2820710548720850007}
-  - component: {fileID: 2820710548720850002}
-  - component: {fileID: 2820710548720850005}
-  - component: {fileID: 2820710548720850004}
+  - component: {fileID: 8538933384177066935}
+  - component: {fileID: 8538933384177066930}
+  - component: {fileID: 8538933384177066932}
+  - component: {fileID: 8305130138667024557}
   m_Layer: 0
   m_Name: startCutscene
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2820710548720850007
+--- !u!4 &8538933384177066935
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820710548720850006}
+  m_GameObject: {fileID: 8538933384177066934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.1, y: -4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2820710548720850002
+--- !u!61 &8538933384177066930
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820710548720850006}
+  m_GameObject: {fileID: 8538933384177066934}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -60,30 +60,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4.6081367}
   m_EdgeRadius: 0
---- !u!114 &2820710548720850005
+--- !u!114 &8538933384177066932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820710548720850006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bd9aef4622bcef40a954e5b57228ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationScene: {fileID: 0}
-  animationBully: {fileID: 0}
-  dialogue: {fileID: 2820710548720850004}
-  count: 0
-  player: {fileID: 0}
---- !u!114 &2820710548720850004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820710548720850006}
+  m_GameObject: {fileID: 8538933384177066934}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c30de6d9ff3cad2429a34ec055e10c39, type: 3}
@@ -103,3 +86,20 @@ MonoBehaviour:
     - 'Bully:
 
       Mhhmmmm....... okk........ fine'
+--- !u!114 &8305130138667024557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538933384177066934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e7b80b9690f8f4b9584f8695955d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 8538933384177066932}
+  dialogue2: {fileID: 0}
+  journal: {fileID: 0}
+  count: 0
+  player: {fileID: 0}

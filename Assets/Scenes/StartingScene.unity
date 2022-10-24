@@ -2098,7 +2098,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - NOOOOOOOOOOOOOOOOOOOO!
+    - 'NOOOOOOOO! The bully ripped up my paper with the code on it. '
+    - All the pieces flew away!
 --- !u!1 &434402747
 GameObject:
   m_ObjectHideFlags: 0

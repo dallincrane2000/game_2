@@ -8,14 +8,15 @@ public class startCutscene : MonoBehaviour
     public Animator animationBully;
     public static bool isCutSceneOn;
     public DialogueTrigger dialogue;
-    //public DialogueTrigger dialogue2;
+    public DialogueTrigger dialogue2;
     public int count = 0;
     public GameObject player;
 
     void Start()
     {
         animationScene = GameObject.Find("cameraControl").GetComponent<Animator>();
-        animationBully = GameObject.Find("clueBully(Clone)").GetComponent<Animator>();
+        animationBully = GameObject.Find("clueBully").GetComponent<Animator>();
+        dialogue2 = GameObject.Find("Dialogue").GetComponent<DialogueTrigger>();
         player = GameObject.Find("Player");
     }
 
@@ -61,7 +62,7 @@ public class startCutscene : MonoBehaviour
         }
         else if(count > 1)
         {
-            //dialogue2.TriggerDialogue();
+            dialogue2.TriggerDialogue();
         }
     }
 }
