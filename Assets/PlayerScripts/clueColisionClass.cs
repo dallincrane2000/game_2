@@ -6,14 +6,24 @@ using UnityEngine.SceneManagement;
 public class clueColisionClass: MonoBehaviour
 {
     public DialogueTrigger dialogue;
+    public GameObject bullyPrefab;
+    public GameObject endCutscene;
+    public Transform cutsceneTrigger;
+    public Transform bullySpawn;
     public journalMove journal;
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
+    IEnumerator OnTriggerEnter2D(Collider2D hitInfo)
     {
         if(hitInfo.CompareTag("Player") && !gameObject.CompareTag("Bully"))
         {
             //coins ++;
             dialogue.TriggerDialogue();
+            if(hitInfo.CompareTag("Player") && gameObject.CompareTag("1"))
+            {
+                yield return new WaitForSeconds(5);
+                Instantiate(bullyPrefab, bullySpawn.position, bullySpawn.rotation);
+                Instantiate(endCutscene, cutsceneTrigger.position, cutsceneTrigger.rotation);
+            }
             Destroy(gameObject);
         }
         if(hitInfo.CompareTag("Player") && gameObject.CompareTag("Bully"))

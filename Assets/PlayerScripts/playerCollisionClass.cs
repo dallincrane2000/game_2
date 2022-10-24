@@ -5,65 +5,73 @@ using UnityEngine;
 public class playerCollisionClass : MonoBehaviour
 {
 
-    public journalMove journal;
+    public journalMove journalMove;
+    private GameObject journal;
+
+    void Start()
+    {
+        journal = GameObject.Find("JournalManager");
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("clueVents"))
         {
-            journal.isVents = true;
+            journalMove.isVents = true;
+            journal.GetComponent<journalManager>().isVents = journalMove.isVents;
         }
         if(collider.CompareTag("clueTree"))
         {
-            journal.isTree = true;
+            journalMove.isTree = true;
         }
         if(collider.CompareTag("cluePlayground"))
         {
-            journal.isPlayground = true;
+            journalMove.isPlayground = true;
+            journal.GetComponent<journalManager>().isPlayground = journalMove.isPlayground;
         }
         if(collider.CompareTag("clueBully"))
         {
-            journal.isBully = true;
+            journalMove.isBully = true;
         }
         if(collider.CompareTag("crowbar"))
         {
-            journal.crowbar = true;
+            journalMove.crowbar = true;
         }
         if(collider.CompareTag("1"))
         {
-            journal.one = true;
+            journalMove.one = true;
         }
         if(collider.CompareTag("2"))
         {
-            journal.two = true;
+            journalMove.two = true;
         }
         if(collider.CompareTag("3"))
         {
-            journal.three = true;
+            journalMove.three = true;
         }
         if(collider.CompareTag("4"))
         {
-            journal.four = true;
+            journalMove.four = true;
         }
         if(collider.CompareTag("5"))
         {
-            journal.five = true;
+            journalMove.five = true;
         }
         if(collider.CompareTag("6"))
         {
-            journal.six = true;
+            journalMove.six = true;
         }
         if(collider.CompareTag("7"))
         {
-            journal.seven = true;
+            journalMove.seven = true;
         }
         if(collider.CompareTag("8"))
         {
-            journal.eight = true;
+            journalMove.eight = true;
         }
         if(collider.CompareTag("9"))
         {
-            journal.nine = true;
+            journalMove.nine = true;
         }
     }
 

@@ -22,9 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpSound;
     static AudioSource audio;
    
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
-    public float jumpVelocity = 20;
+    public float fallMultiplier = 5f;
+    public float lowJumpMultiplier = 3f;
+    public float jumpVelocity = 12;
     public float destroyTime = 0.5f;
 
     void Start()
@@ -64,9 +64,9 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
-        if(h > 0 && !facingRight)
+        if(h > 0 && facingRight)
             Flip();
-        else if(h < 0 && facingRight)
+        else if(h < 0 && !facingRight)
             Flip();
     }
     ///////////

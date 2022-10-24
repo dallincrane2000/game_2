@@ -1179,6 +1179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 373499137}
+  bullyPrefab: {fileID: 0}
+  bullySpawn: {fileID: 0}
   journal: {fileID: 871580986}
 --- !u!114 &373499137
 MonoBehaviour:
@@ -4360,7 +4362,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1051624942, guid: 4caf5d857536cbe4393a024323c0b493, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -4397,7 +4399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfaece2f97693ce4790b5dd93f1489d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  journal: {fileID: 871580986}
+  journalMove: {fileID: 871580986}
 --- !u!82 &1243459206
 AudioSource:
   m_ObjectHideFlags: 0

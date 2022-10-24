@@ -2,37 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class startCutscene : MonoBehaviour
+public class endCutscene : MonoBehaviour
 {
-    public Animator animationScene;
-    public Animator animationBully;
+    private Animator animationScene;
+    private Animator animationBully;
     public static bool isCutSceneOn;
     public DialogueTrigger dialogue;
-    //public DialogueTrigger dialogue2;
+    public DialogueTrigger dialogue2;
     public int count = 0;
     public GameObject player;
 
     void Start()
     {
         animationScene = GameObject.Find("cameraControl").GetComponent<Animator>();
-        animationBully = GameObject.Find("clueBully(Clone)").GetComponent<Animator>();
-        player = GameObject.Find("Player");
+        animationBully = GameObject.Find("clueBully").GetComponent<Animator>();
     }
 
 
-    IEnumerator OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
             isCutSceneOn = true;
+            count += 1;
             player.GetComponent<PlayerMovement>().speed = 0f;
             player.GetComponent<PlayerMovement>().jumpVelocity = 0f;
             animationScene.SetBool("cutscene1", true);
-            count += 1;
-            dialogueSet();
-            yield return new WaitForSeconds(4);
-            setAnimation();
-            yield return new WaitForSeconds(4);
             dialogueSet();
             Invoke(nameof(StopCutscene), 5f);
         }
@@ -44,13 +39,9 @@ public class startCutscene : MonoBehaviour
         player.GetComponent<PlayerMovement>().speed = 7f;
         player.GetComponent<PlayerMovement>().jumpVelocity = 12f;
         animationScene.SetBool("cutscene1", false);
-        animationBully.SetBool("ripping", false);
         Destroy(gameObject);
     }
-    void setAnimation()
-    {
-        animationBully.SetBool("ripping", true);
-    }
+
 
     void dialogueSet()
     {
@@ -61,7 +52,7 @@ public class startCutscene : MonoBehaviour
         }
         else if(count > 1)
         {
-            //dialogue2.TriggerDialogue();
+            dialogue2.TriggerDialogue();
         }
     }
 }

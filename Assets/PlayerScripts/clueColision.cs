@@ -10,9 +10,8 @@ public class clueColision: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if(hitInfo.CompareTag("Player") && !gameObject.CompareTag("Bully"))
+        if(hitInfo.CompareTag("Player") && !gameObject.CompareTag("Bully") && !gameObject.CompareTag("4"))
         {
-            //coins ++;
             dialogue.TriggerDialogue();
             Destroy(gameObject);
         }
@@ -20,13 +19,15 @@ public class clueColision: MonoBehaviour
         {
             dialogue.TriggerDialogue();
         }
+
+
         if(hitInfo.CompareTag("Player") && gameObject.CompareTag("4") && journal.crowbar == true)
         {
             //dialogue.TriggerDialogue();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //Switch scenes
         }
-        else if(hitInfo.CompareTag("Player") && gameObject.CompareTag("4") && journal.crowbar == false)
+        if(hitInfo.CompareTag("Player") && gameObject.CompareTag("4") && journal.crowbar == false)
         {
             dialogue.TriggerDialogue();
         }

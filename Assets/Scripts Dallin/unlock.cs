@@ -21,7 +21,7 @@ public class unlock : MonoBehaviour
         {
             Debug.Log("Correct");
             gameObject.SetActive(false);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         else if (codeTextValue.Length >= 4)
