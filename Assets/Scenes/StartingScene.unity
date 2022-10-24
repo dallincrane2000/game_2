@@ -7954,7 +7954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1417714117}
-  journal: {fileID: 0}
+  journal: {fileID: 823754755}
 --- !u!114 &1417714117
 MonoBehaviour:
   m_ObjectHideFlags: 0
