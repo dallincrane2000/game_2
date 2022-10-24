@@ -5402,7 +5402,7 @@ MonoBehaviour:
     name: 
     sentences:
     - I found one of the pieces to the code in the tree! I wonder if i can find the
-      rest...
+      rest... Press TAB to see all your clues!
 --- !u!212 &1272082934
 SpriteRenderer:
   m_ObjectHideFlags: 0
